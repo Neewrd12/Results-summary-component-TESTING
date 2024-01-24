@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Results summary component</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body style="display: flex; justify-content: center; padding: 80px 0;">
+  <div style="display: inline-block; box-shadow: 1px 1px 20px rgb(207, 205, 205); border-radius: 25px;">
+    <div class="main-con">
+      <div class="left-sider">
+        <div class="score">
+          <p style="margin-bottom: 35px; font-size: 22px; color: hsl(221, 100%, 96%);">Your Result</p>
+          <div class="nilai">
+
+            <p class="nilai-asli">00</p>
+            <p class="jarak-nilai">of 100</p>
+          </div>
+
+        </div>
+        
+        <div style="display: flex; flex: 1; justify-content: center;">
+          <p class="rating" style="color: hsl(0, 0%, 100%); font-size: 26px; font-weight: 700; margin: 0; margin-top: 30px;">Find out</p>
+        </div>
+
+        <div style="text-align: center;">
+          <p class="descriptipm" style="color: hsl(241, 100%, 89%);">The system will show your score after you hit the "count" button, thank you for being here.
+          </p>
+        </div>
+      </div>
+      
+      <div style="width: 275px;">
+        <div style="display: flex; flex: 1; flex-direction: column; padding-left: 10px; padding-right: 10px;">
+          
+          <div style="display: flex; flex: 1; flex-direction: column; margin-left: 10px;">
+            <p style="margin-bottom: 25px; margin-top: 20px; font-weight: 800; color: hsl(224, 30%, 27%); font-size: 20px;">Summary</p>
+
+            <div style="display: flex; justify-content: space-between; flex: 1; margin-bottom: 10px; background-color: hsl(0, 61%, 90%); border-radius: 10px;">
+              
+              <div style="display: flex; margin-left: 15px;">
+                <img src="images/icon-reaction.svg" alt="">
+                <p style="color: hsl(0, 100%, 67%);">Reaction</p>
+              </div>
+              
+              <div style="display: flex; align-items: center;">
+                <input type="text" class="react_input" oninput="below100();">
+
+                <p style="margin-right: 10px;">/100</p>
+              </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; flex: 1; margin-bottom: 10px; background-color: hsl(39, 72%, 86%); border-radius: 10px;">
+              <div style="display: flex; margin-left: 15px;">
+                <img src="images/icon-memory.svg" alt="">
+                <p style="color: hsl(39, 100%, 56%);">Memory</p>
+              </div>
+              
+              <div style="display: flex; align-items: center;">
+                <input type="text" class="memory_input" oninput="below100();">
+
+                <p style="margin-right: 10px;">/100</p>
+              </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; flex: 1; margin-bottom: 10px; background-color: hsl(164, 49%, 92%); border-radius: 10px;">
+              <div style="display: flex; margin-left: 15px;">
+                <img src="images/icon-verbal.svg" alt="">
+                <p style="color: hsl(166, 100%, 37%);">Verbal</p>
+              </div>
+              
+              <div style="display: flex; align-items: center;">
+                <input type="text" class="verbal_input" oninput="below100();">
+
+                <p style="margin-right: 10px;">/100</p>
+              </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; flex: 1; margin-bottom: 10px; background-color: hsl(234, 54%, 90%); border-radius: 10px;">
+              <div style="display: flex; margin-left: 15px;">
+                <img src="images/icon-visual.svg" alt="">
+                <p style="color: hsl(234, 85%, 45%);">Visual</p>
+              </div>
+              
+              <div style="display: flex; align-items: center;">
+                <input type="text" class="visual_input" oninput="below100();">
+
+                <p style="margin-right: 10px;">/100</p>
+              </div>
+            </div>
+
+            <button class="button" onclick="input();">Count</button>
+            <p style="cursor: pointer; width: 40px;" onclick="reset();">Reset</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
